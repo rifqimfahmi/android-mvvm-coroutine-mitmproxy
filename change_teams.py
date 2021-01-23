@@ -4,7 +4,7 @@ from mitmproxy import http
 class ChangeTeam:
 
     def __init__(self):
-            self.modify_request = False
+            self.modify_request = True
 
     # mitmproxy event
     def response(self, flow: http.HTTPFlow) -> None:

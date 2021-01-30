@@ -11,7 +11,7 @@ class ChangeTeam:
         if self.is_request_match(flow):
             modified_response = open("./responses/long_name_teams.json", "r").read()
             flow.response.text = modified_response
-            print("Change teams responses")
+            print("----------------->Change teams responses<-----------------")
 
     def is_request_match(self, flow: http.HTTPFlow) -> bool:
         request_path = flow.request.path

@@ -4,11 +4,11 @@ from mitmproxy import http
 class ChangeTeam:
 
     def __init__(self):
-            self.is_modify_request = True
+        pass
 
     # mitmproxy event
     def response(self, flow: http.HTTPFlow) -> None:
-        if self.is_request_match(flow) and self.is_modify_request:
+        if self.is_request_match(flow):
             modified_response = open("./responses/long_name_teams.json", "r").read()
             flow.response.text = modified_response
             print("Change teams responses")
